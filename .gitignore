@@ -1,0 +1,15 @@
+node_modules
+.idea
+
+#Hardhat files
+cache
+artifacts
+
+# .env file
+.env
+
+
+# React front-end
+frontend/.env
+frontend/node_modules
+

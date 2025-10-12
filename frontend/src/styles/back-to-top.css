@@ -1,0 +1,52 @@
+/**
+ * back-to-top.css
+ *
+ * Styles for the floating "Back to Top" button.
+ * The button remains hidden until the user scrolls beyond
+ * a defined point (controlled by the React component).
+ */
+
+.back-to-top {
+  position: fixed; /* Keeps the button fixed in the viewport */
+  right: 1rem; /* Distance from the right edge */
+  bottom: 1.5rem; /* Distance from the bottom */
+  z-index: 1000; /* Ensure it's above most elements */
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* Circular button */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #ffffff; /* White background */
+  color: #333; /* Icon/text color */
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.2s ease;
+
+  opacity: 0; /* Hidden by default */
+  transform: translateY(8px); /* Slight downward offset */
+  pointer-events: none; /* Prevents click when invisible */
+}
+
+/* Visible state (added dynamically with React) */
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  transform: translateY(-2px);
+}
+
+/* Optional: focus state for accessibility */
+.back-to-top:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}

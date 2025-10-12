@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">POAP+ Badge</title>
+  <desc id="desc">Badge circulaire avec ruban et plus pour preuve de présence.</desc>
+  <!-- cercle extérieur -->
+  <circle cx="100" cy="80" r="58" fill="#ffffff" stroke="#0B76FF" stroke-width="6"></circle>
+  <!-- décor intérieur (anneau) -->
+  <circle cx="100" cy="80" r="44" fill="#0B76FF" opacity="0.10"></circle>
+  <!-- icône check stylisée (preuve) -->
+  <path d="M82 76 L94 92 L118 66" fill="none" stroke="#0B76FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- ruban -->
+  <path d="M60 128 L80 110 L80 150 L60 128 Z" fill="#0B76FF" opacity="0.95"></path>
+  <path d="M140 128 L120 110 L120 150 L140 128 Z" fill="#0B76FF" opacity="0.95"></path>
+  <!-- petit plus en badge -->
+  <circle cx="150" cy="45" r="20" fill="#0B76FF"></circle>
+  <path d="M150 38 v14 M143 45 h14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"></path>
+</svg>
