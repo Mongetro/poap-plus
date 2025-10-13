@@ -83,3 +83,21 @@ export const formatAddress = (address, startChars = 6, endChars = 4) => {
   if (!address || address.length !== 42) return 'Invalid Address';
   return `${address.slice(0, startChars)}...${address.slice(-endChars)}`;
 };
+
+/**
+ * Format transaction hash for display (truncate middle)
+ * @param {string} transactionHash - Full transaction hash
+ * @param {number} startChars - Number of starting characters to show
+ * @param {number} endChars - Number of ending characters to show
+ * @returns {string} Truncated transaction hash
+ */
+export const formatTransactionHash = (
+  transactionHash,
+  startChars = 10,
+  endChars = 8,
+) => {
+  if (!transactionHash || transactionHash.length !== 66) return 'Processing...';
+  return `${transactionHash.slice(0, startChars)}...${transactionHash.slice(
+    -endChars,
+  )}`;
+};

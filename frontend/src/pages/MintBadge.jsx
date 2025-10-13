@@ -26,6 +26,7 @@ import { useContractAddress } from '../hooks/useContractAddress';
 import { IPFSService } from '../services/ipfsService';
 import {
   formatAddress,
+  formatTransactionHash, // ← Ajoutez ceci
   getExplorerUrl,
   getNetworkName,
   isLocalhost,
@@ -703,15 +704,18 @@ export default function MintBadge() {
                     <div className="alert alert-info">
                       <div className="d-flex align-items-center justify-content-between">
                         <span>
-                          <strong>Transaction:</strong> {formatAddress(hash)}
-                          {!isLocalhost(client.chain) && (
-                            <button
-                              className="btn btn-sm btn-outline-info ms-2"
-                              onClick={openTransactionExplorer}
-                            >
-                              <FaExternalLinkAlt size={12} />
-                            </button>
-                          )}
+                          <strong>Transaction:</strong>{' '}
+                          {formatTransactionHash(hash)}
+                          {hash &&
+                            hash.length === 66 &&
+                            !isLocalhost(client.chain) && (
+                              <button
+                                className="btn btn-sm btn-outline-info ms-2"
+                                onClick={openTransactionExplorer}
+                              >
+                                <FaExternalLinkAlt size={12} />
+                              </button>
+                            )}
                         </span>
                       </div>
                     </div>
