@@ -137,7 +137,7 @@ You will need to have a compatible Ethereum wallet, such as [MetaMask](https://m
 
 **_Transaction Failures_**
 
-- Check you have sufficient gas funds
+- Check you have sufficient gas funds (ETH)
 - Verify contract is deployed on current network
 
 **_Frontend Build Issues_**
