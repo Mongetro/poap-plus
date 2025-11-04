@@ -110,7 +110,6 @@ You will need to have a compatible Ethereum wallet, such as [MetaMask](https://m
 - Navigate to "Create Event"
 - Fill in event details (name, date, organizer)
 - Upload an event image (stored on IPFS)
-- Upload an event image (stored on IPFS)
 - Send data and confirm the blockchain transaction via your wallet
 
 ## 3. Mint Badges
